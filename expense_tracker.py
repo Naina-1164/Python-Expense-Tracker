@@ -1,4 +1,6 @@
-# Python Expense Tracker - Version 2
+# Python Expense Tracker - Version 3
+
+import csv
 
 expenses = []
 categories = []
@@ -25,3 +27,13 @@ print(f"\nTotal Expense: ₹{total_expense:.2f}")
 print(f"Average Expense: ₹{average_expense:.2f}")
 print(f"Highest Expense: ₹{highest_expense:.2f}")
 print(f"Lowest Expense: ₹{lowest_expense:.2f}")
+
+# Save the entered expenses to a CSV file
+with open("expenses.csv", "w", newline="", encoding="utf-8") as file:
+    writer = csv.writer(file)
+    writer.writerow(["Category", "Amount"])
+
+    for i in range(len(expenses)):
+        writer.writerow([categories[i], expenses[i]])
+
+print("\nExpenses saved to expenses.csv successfully.")
