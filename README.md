@@ -2,32 +2,45 @@
 
 A beginner-friendly Python project that I am improving step by step while practicing programming fundamentals.
 
-## Version 2 - Categories and Expense Statistics
+## Version 3 - Save Expenses to CSV
 
-The program asks the user to enter 3 expenses along with a category for each expense. It then displays:
+The program asks the user to enter 3 expenses with categories. It displays a simple expense summary and now also saves the entered data to an `expenses.csv` file.
 
-- Each expense with its category
-- Total expense
-- Average expense
-- Highest expense
-- Lowest expense
+### Current Features
+
+- Enter 3 expenses and categories
+- Display each expense with its category
+- Calculate total expense
+- Calculate average expense
+- Find highest and lowest expense
+- Save category and amount data to CSV
 
 ## Concepts Practiced
 
 - `input()`
-- Variables
-- Lists
-- `for` loops
-- `append()`
-- `sum()`
-- `max()` and `min()`
+- Lists and `for` loops
+- `sum()`, `max()`, and `min()`
 - Basic calculations
-- Formatted output
+- Python `csv` module
+- `with open()`
+- `csv.writer()`
+- Writing rows to a file
 
 ## How to Run
 
 ```bash
 python expense_tracker.py
+```
+
+After entering the expenses, the program creates `expenses.csv` in the same folder.
+
+Example:
+
+```csv
+Category,Amount
+Food,250
+Travel,500
+Shopping,300
 ```
 
 ## Learning Progress
@@ -36,4 +49,6 @@ python expense_tracker.py
 
 **Version 2:** Added expense categories and highest/lowest expense calculations.
 
-The project is intentionally being improved gradually. A future version can introduce saving expenses to a file or working with CSV data after the basic concepts are comfortable.
+**Version 3:** Added basic CSV file saving using Python's built-in `csv` module.
+
+The project is intentionally improving gradually. Pandas and more advanced data analysis can be introduced in a later version.
