@@ -1,54 +1,32 @@
 # Python Expense Tracker
 
-A beginner-friendly Python project that I am improving step by step while practicing programming fundamentals.
+A beginner-friendly Python project improved step by step while practicing programming fundamentals.
 
-## Version 3 - Save Expenses to CSV
+## Version 4 - Read Saved CSV Data
 
-The program asks the user to enter 3 expenses with categories. It displays a simple expense summary and now also saves the entered data to an `expenses.csv` file.
+The program now saves entered expenses to `expenses.csv` and then reads the saved file back to display the data.
 
 ### Current Features
 
 - Enter 3 expenses and categories
-- Display each expense with its category
-- Calculate total expense
-- Calculate average expense
-- Find highest and lowest expense
-- Save category and amount data to CSV
+- Calculate total, average, highest, and lowest expense
+- Save expenses to CSV
+- Read the saved CSV
+- Display saved category and amount values
 
-## Concepts Practiced
+## New Concepts Practiced
 
-- `input()`
-- Lists and `for` loops
-- `sum()`, `max()`, and `min()`
-- Basic calculations
-- Python `csv` module
-- `with open()`
-- `csv.writer()`
-- Writing rows to a file
-
-## How to Run
-
-```bash
-python expense_tracker.py
-```
-
-After entering the expenses, the program creates `expenses.csv` in the same folder.
-
-Example:
-
-```csv
-Category,Amount
-Food,250
-Travel,500
-Shopping,300
-```
+- Reading files with `with open(..., "r")`
+- `csv.reader()`
+- Skipping a CSV header with `next()`
+- Looping through CSV rows
+- Converting saved amount text to `float`
 
 ## Learning Progress
 
-**Version 1:** Entered 3 expenses and calculated total and average.
+**Version 1:** Basic calculations  
+**Version 2:** Categories and statistics  
+**Version 3:** CSV writing  
+**Version 4:** CSV reading
 
-**Version 2:** Added expense categories and highest/lowest expense calculations.
-
-**Version 3:** Added basic CSV file saving using Python's built-in `csv` module.
-
-The project is intentionally improving gradually. Pandas and more advanced data analysis can be introduced in a later version.
+Pandas, exception handling, and databases are intentionally left for later versions.
