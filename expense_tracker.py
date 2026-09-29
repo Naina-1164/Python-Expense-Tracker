@@ -1,4 +1,4 @@
-# Python Expense Tracker - Version 4
+# Python Expense Tracker - Version 5
 
 import csv
 
@@ -38,7 +38,7 @@ with open("expenses.csv", "w", newline="", encoding="utf-8") as file:
 
 print("\nExpenses saved to expenses.csv successfully.")
 
-# Version 4: Read the saved CSV file
+# Read the saved CSV file
 print("\n--- Saved Expenses ---")
 
 with open("expenses.csv", "r", newline="", encoding="utf-8") as file:
@@ -49,3 +49,24 @@ with open("expenses.csv", "r", newline="", encoding="utf-8") as file:
         category = row[0]
         amount = float(row[1])
         print(f"{category}: ₹{amount:.2f}")
+
+# Version 5: Calculate category-wise totals from the saved CSV
+category_totals = {}
+
+with open("expenses.csv", "r", newline="", encoding="utf-8") as file:
+    reader = csv.reader(file)
+    next(reader)
+
+    for row in reader:
+        category = row[0]
+        amount = float(row[1])
+
+        if category in category_totals:
+            category_totals[category] += amount
+        else:
+            category_totals[category] = amount
+
+print("\n--- Category Summary ---")
+
+for category, total in category_totals.items():
+    print(f"{category}: ₹{total:.2f}")
